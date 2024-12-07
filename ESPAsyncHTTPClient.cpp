@@ -70,7 +70,7 @@ void AsyncHTTPClient::initialize(String url) {
 #endif
 
 	DEBUG(initialized);
-	request = "GET " + uri + " HTTP/1.1\r\nHost: " + host + "\r\n\r\n";
+	request = "GET " + uri + " HTTP/1.1\r\nHost: " + host + "\r\nConnection: close\r\n\r\n";
 
 	DEBUG(request);
 	initialized = true;
